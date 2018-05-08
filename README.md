@@ -1,4 +1,4 @@
-# 🚀 ESLINT ON MODIFICATIONS ONLY 🚀
+# 🚀 ESLint on modifications only 🚀
 
 The problem with linting is that it doesn't work on the lines you have changed or modified. It works on the entire file. This problem is trivial on small codebases but as number of files and their sizes grow, it can become an issue.
 
