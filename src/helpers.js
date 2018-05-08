@@ -1,3 +1,5 @@
+import { exec } from 'child-process-promise';
+
 export async function getLineNumbers(fileName) {
   const res = await exec(`git diff -p -U0 --cached ${fileName}`);
 

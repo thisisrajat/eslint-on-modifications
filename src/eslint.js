@@ -1,5 +1,4 @@
 import eslint from 'eslint';
-import { exec } from 'child-process-promise';
 import path from 'path';
 
 import { getLineNumbers, getDiffFiles } from './helpers';
