@@ -1,4 +1,4 @@
-# ESLINT ON MODIFICATIONS ONLY
+# 🚀 ESLINT ON MODIFICATIONS ONLY 🚀
 
 The problem with linting is that it doesn't work on the lines you have changed or modified. It works on the entire file. This problem is trivial on small codebases but as number of files and their sizes grow, it can become an issue.
 
@@ -6,7 +6,7 @@ Linting becomes irrelevant when every error on the file is reported instead of e
 
 I believe linting should happen only on the changes that you've introduced.
 
-**__DRUMROLL PLEASE__**
+🥁🥁 **__DRUMROLL PLEASE__** 🥁🥁
 
 #### Presenting ESLint on modifications only.
 
@@ -14,18 +14,15 @@ The idea behind this library is simple: Lint only what you've changed.
 
 ## USAGE:
 
-To add it to your already existing codebase, run either
-`npm install eslint-on-modifications --save-dev` or `yarn add --dev eslint-on-modifications` depending on which package manager you use.
+To add it to your already existing codebase, run either `npm install eslint-on-modifications --save-dev` or `yarn add --dev eslint-on-modifications` depending on which package manager you use.
 
 After installing, you can add a npm script in your `package.json` like:
 
 ```json
   {
-    ...
     "scripts": {
       "lint": "eslint-on-modifications"
     }
-    ...
   }
 ```
 
