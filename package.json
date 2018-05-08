@@ -1,6 +1,6 @@
 {
   "name": "eslint-on-modifications",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "bin": "./bin.js",
   "repository": "https://github.com/thisisrajat/eslint-on-modifications",
   "author": "Rajat Jain <rajat.rj10@gmail.com>",
