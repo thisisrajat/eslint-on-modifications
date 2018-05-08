@@ -6,8 +6,7 @@
   "author": "Rajat Jain <rajat.rj10@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "build": "babel src/ --out-dir lib/",
-    "postinstall": "npm run build"
+    "build": "babel src/ --out-dir lib/"
   },
   "dependencies": {
     "babel-cli": "^6.26.0",
