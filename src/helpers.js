@@ -3,7 +3,7 @@ const spawn = require('cross-spawn').sync;
 module.exports = {
   getLineNumbers: function(fileName) {
     //  Get the diff hunk of a given file which is staged.
-    const res = spawn(`git diff -p -U0 --cached ${fileName}`).stdout.toString();
+    const res = spawn(`git diff -p -U0 --cached ${fileName}`, { shell: true }).stdout.toString();
 
     let matches = null;
     const lines = (res || '').split('\n');
@@ -27,7 +27,7 @@ module.exports = {
 
   getDiffFiles: function() {
     try {
-      let files = spawn(`git diff --cached --name-only -- '*.js'`).stdout.toString();
+      let files = spawn(`git diff --cached --name-only -- '*.js'`, { shell: true }).stdout.toString();
       files = (files || '').split('\n');
       files.pop();
       return files;
