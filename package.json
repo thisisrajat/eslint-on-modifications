@@ -5,11 +5,14 @@
   "repository": "https://github.com/thisisrajat/eslint-on-modifications",
   "author": "Rajat Jain <rajat.rj10@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "lint": "node bin.js"
+  },
   "dependencies": {
     "cross-spawn": "^6.0.5"
   },
   "devDependencies": {
-    "eslint": "^4.19.1"
+    "eslint": "^4.19.1",
   },
   "peerDependencies": {
     "eslint": "*"

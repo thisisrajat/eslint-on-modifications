@@ -65,4 +65,4 @@ function main() {
   process.exit(errCount > 0 ? PROCESS_FAILURE_EXIT : PROCESS_SUCCESS_EXIT);
 }
 
-main();
+module.exports = main;

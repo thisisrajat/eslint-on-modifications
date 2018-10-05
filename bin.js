@@ -1,3 +1,3 @@
 #!/usr/bin/env node
 
-require('./src/eslint.js');
+require('./src/eslint.js')();
