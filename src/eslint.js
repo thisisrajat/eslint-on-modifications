@@ -1,7 +1,6 @@
-import eslint from 'eslint';
-import path from 'path';
-
-import { getLineNumbers, getDiffFiles } from './helpers';
+const eslint = require('eslint');
+const path = require('path');
+const { getLineNumbers, getDiffFiles } = require('./helpers');
 
 const ESLINT_ERROR_LEVEL = 2;
 
@@ -11,14 +10,14 @@ const PROCESS_FAILURE_EXIT = 1;
 const CLIEngine = new eslint.CLIEngine();
 const Formatter = CLIEngine.getFormatter();
 
-async function eslintRunner() {
-  const files = await getDiffFiles();
+function eslintRunner() {
+  const files = getDiffFiles();
 
   const changes = {};
 
   for (const file of files) {
     const absoluteFilePath = path.resolve(file);
-    changes[absoluteFilePath] = await getLineNumbers(file);
+    changes[absoluteFilePath] = getLineNumbers(file);
   }
 
   const eslintReport = CLIEngine.executeOnFiles(
@@ -61,9 +60,9 @@ async function eslintRunner() {
 }
 
 function main() {
-  eslintRunner().then(errCount => {
-    process.exit(errCount > 0 ? PROCESS_FAILURE_EXIT : PROCESS_SUCCESS_EXIT);
-  });
+  const errCount = eslintRunner();
+
+  process.exit(errCount > 0 ? PROCESS_FAILURE_EXIT : PROCESS_SUCCESS_EXIT);
 }
 
-export default main;
+main();

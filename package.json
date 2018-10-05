@@ -1,26 +1,18 @@
 {
   "name": "eslint-on-modifications",
-  "version": "1.0.2",
+  "version": "2.0.0-rc.1",
   "bin": "./bin.js",
   "repository": "https://github.com/thisisrajat/eslint-on-modifications",
   "author": "Rajat Jain <rajat.rj10@gmail.com>",
   "license": "MIT",
-  "scripts": {
-    "build": "babel src/ --out-dir lib/",
-    "preinstall": "npm run build"
-  },
   "dependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.3",
-    "babel-polyfill": "^6.0.16",
-    "babel-preset-env": "^1.6.1",
-    "child-process-promise": "^2.2.1"
+    "cross-spawn": "^6.0.5"
   },
   "devDependencies": {
     "eslint": "^4.19.1"
   },
   "peerDependencies": {
-    "eslint": "^3.19.0"
+    "eslint": "*"
   },
   "keywords": [
     "eslint",
